@@ -794,6 +794,197 @@
 
   .footer-links a:hover { color: var(--gold); }
 
+  /* CAREERS */
+  #careers { background: var(--cream); padding: 7rem 5%; }
+
+  .careers-intro {
+    font-size: 1rem;
+    color: var(--text-mid);
+    max-width: 580px;
+    line-height: 1.85;
+    margin-bottom: 4rem;
+  }
+
+  .careers-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .roles-list { display: flex; flex-direction: column; gap: 1px; background: var(--cream-dark); }
+
+  .role-item {
+    background: #fff;
+    padding: 1.6rem 2rem;
+    cursor: pointer;
+    border-left: 3px solid transparent;
+    transition: border-color 0.25s, background 0.25s;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .role-item:hover { border-left-color: var(--gold); background: var(--cream); }
+  .role-item.active { border-left-color: var(--gold); background: var(--cream); }
+
+  .role-info {}
+
+  .role-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+  }
+
+  .role-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .role-tag {
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    background: var(--cream-dark);
+    padding: 0.2rem 0.7rem;
+    border-radius: 1px;
+  }
+
+  .role-tag.gold { color: var(--gold); background: rgba(184,150,90,0.08); }
+
+  .role-arrow {
+    font-size: 0.8rem;
+    color: var(--gold);
+    flex-shrink: 0;
+    margin-top: 4px;
+    transition: transform 0.2s;
+  }
+
+  .role-item.active .role-arrow { transform: rotate(90deg); }
+
+  .role-desc {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    padding: 0 2rem 1.4rem;
+    background: #fff;
+    display: none;
+    border-left: 3px solid var(--gold);
+  }
+
+  .role-desc.open { display: block; }
+
+  .application-panel {
+    position: sticky;
+    top: 100px;
+    background: var(--navy);
+    padding: 2.8rem;
+  }
+
+  .application-panel h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 0.4rem;
+  }
+
+  .application-panel-sub {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(184,150,90,0.2);
+  }
+
+  .app-form .form-group { margin-bottom: 1.1rem; }
+
+  .app-form .form-group label {
+    display: block;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 0.4rem;
+  }
+
+  .app-form .form-group input,
+  .app-form .form-group select,
+  .app-form .form-group textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(184,150,90,0.2);
+    color: rgba(255,255,255,0.85);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 0.88rem;
+    padding: 0.8rem 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+    -webkit-appearance: none;
+  }
+
+  .app-form .form-group select option { background: var(--navy); }
+
+  .app-form .form-group input::placeholder,
+  .app-form .form-group textarea::placeholder { color: rgba(255,255,255,0.2); }
+
+  .app-form .form-group input:focus,
+  .app-form .form-group select:focus,
+  .app-form .form-group textarea:focus { border-color: rgba(184,150,90,0.6); }
+
+  .app-form .form-group textarea { height: 90px; resize: vertical; }
+
+  .file-upload-area {
+    border: 1px dashed rgba(184,150,90,0.3);
+    padding: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    background: rgba(255,255,255,0.02);
+  }
+
+  .file-upload-area:hover { border-color: rgba(184,150,90,0.6); }
+
+  .file-upload-label {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .file-upload-hint {
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 0.05em;
+  }
+
+  .app-submit {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--gold);
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+    margin-top: 0.8rem;
+  }
+
+  .app-submit:hover { background: var(--gold-light); }
+
   /* SCROLL REVEAL */
   .reveal {
     opacity: 0;
@@ -818,6 +1009,8 @@
     .nav-links { display: none; }
     .presence-inner { flex-direction: column; }
     footer { flex-direction: column; text-align: center; }
+    .careers-layout { grid-template-columns: 1fr; }
+    .application-panel { position: static; }
   }
 </style>
 </head>
@@ -833,6 +1026,7 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#approach">Approach</a></li>
     <li><a href="#leadership">Leadership</a></li>
+    <li><a href="careers.html">Careers</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Enquire</a>
@@ -878,7 +1072,7 @@
       We are based in Canada and work with clients across North America and internationally, advising entrepreneurs, private companies, and institutional clients on transactions ranging from business sales and acquisitions to capital raising and corporate restructuring.
     </p>
     <p class="about-body">
-      Our lean structure allows us to deploy senior expertise efficiently, reducing overhead and ensuring every client receives direct access to principal-level attention throughout the engagement.
+      Our hybrid model allows us to deploy senior expertise efficiently across key markets — maintaining a presence where our clients need us, while keeping our structure lean and our focus where it belongs.
     </p>
   </div>
   <div class="about-right reveal">
@@ -994,7 +1188,7 @@
         Prior to establishing Alderwyn Capital, Charles held senior positions within the Canadian financial services industry, developing deep expertise in cross-border transactions and an extensive network of relationships with buyers, investors, and institutional counterparties across North America and internationally.
       </p>
       <p>
-        Alderwyn Capital operates on a remote-first basis, allowing Charles and the firm's network of advisors to work directly with clients wherever they are — without the overhead of a fixed office and without compromising the quality of engagement.
+        Alderwyn Capital operates on a hybrid basis, combining flexible office access across our key locations with the efficiency of remote working. This allows Charles and the firm's advisors to engage clients wherever they are, without the constraints of a traditional fixed office.
       </p>
     </div>
     </div>
@@ -1088,13 +1282,357 @@
   </div>
 </section>
 
+<!-- CAREERS -->
+<section id="careers">
+  <div class="reveal">
+    <div class="section-eyebrow">Join the Team</div>
+    <h2 class="section-title">Careers at<br><em>Alderwyn Capital</em></h2>
+    <p class="careers-intro">We are a small, selective team and we hire carefully. We look for people who are intellectually curious, take pride in their work, and want to be part of building something serious. Alderwyn Capital operates on a hybrid basis — our team works flexibly across our locations, with access to office space for client meetings, collaborative work, and key transactions. All roles are hybrid unless otherwise stated.</p>
+  </div>
+
+  <div class="careers-layout reveal">
+    <div class="roles-list">
+
+      <!-- CLIENT SERVICES -->
+      <div class="role-item" onclick="toggleRole(this)">
+        <div class="role-info">
+          <div class="role-title">Client Services Associate</div>
+          <div class="role-meta">
+            <span class="role-tag gold">Client Services</span>
+            <span class="role-tag">Toronto</span>
+            <span class="role-tag">Vancouver</span>
+            <span class="role-tag">Hybrid</span>
+          </div>
+        </div>
+        <span class="role-arrow">›</span>
+      </div>
+      <div class="role-desc">
+        You will serve as the primary point of contact for existing and prospective clients, managing inbound enquiries, coordinating meetings, preparing engagement documentation, and ensuring a seamless client experience throughout each mandate. The ideal candidate has strong written and verbal communication skills, a professional manner, and an ability to manage multiple priorities in a fast-paced environment. Prior experience in financial services, professional services, or a client-facing role is preferred.
+      </div>
+
+      <div class="role-item" onclick="toggleRole(this)">
+        <div class="role-info">
+          <div class="role-title">Senior Client Relations Manager</div>
+          <div class="role-meta">
+            <span class="role-tag gold">Client Services</span>
+            <span class="role-tag">Toronto</span>
+            <span class="role-tag">New York City</span>
+            <span class="role-tag">Hybrid</span>
+          </div>
+        </div>
+        <span class="role-arrow">›</span>
+      </div>
+      <div class="role-desc">
+        Leading our client relationship function, you will be responsible for maintaining and deepening relationships with institutional clients, family offices, and corporate partners. This role involves regular travel, senior-level communication, and close coordination with our advisory team throughout active mandates. A minimum of five years in a senior client-facing role within financial services is required.
+      </div>
+
+      <!-- ADVISORY / DEAL -->
+      <div class="role-item" onclick="toggleRole(this)">
+        <div class="role-info">
+          <div class="role-title">Analyst — M&amp;A Advisory</div>
+          <div class="role-meta">
+            <span class="role-tag gold">Advisory</span>
+            <span class="role-tag">Toronto</span>
+            <span class="role-tag">Calgary</span>
+            <span class="role-tag">Hybrid</span>
+          </div>
+        </div>
+        <span class="role-arrow">›</span>
+      </div>
+      <div class="role-desc">
+        As an Analyst on the M&A team, you will support senior advisors across all stages of live transactions — conducting financial analysis, preparing information memoranda, performing comparable company analysis, and coordinating due diligence processes. You will work directly with our principals on active mandates from day one. Candidates should have a strong academic background in finance, economics, or accounting, along with demonstrable financial modelling skills.
+      </div>
+
+      <div class="role-item" onclick="toggleRole(this)">
+        <div class="role-info">
+          <div class="role-title">Associate — Corporate Finance</div>
+          <div class="role-meta">
+            <span class="role-tag gold">Advisory</span>
+            <span class="role-tag">Toronto</span>
+            <span class="role-tag">Vancouver</span>
+            <span class="role-tag">San Francisco</span>
+            <span class="role-tag">Hybrid</span>
+          </div>
+        </div>
+        <span class="role-arrow">›</span>
+      </div>
+      <div class="role-desc">
+        This associate-level role sits within our corporate finance practice, supporting capital raising, valuation, and strategic advisory mandates. Responsibilities include financial modelling, preparation of client presentations and pitch materials, market research, and transaction coordination. Two to four years of experience in investment banking, corporate finance, or a related advisory role is expected.
+      </div>
+
+      <!-- BUSINESS DEVELOPMENT / SALES -->
+      <div class="role-item" onclick="toggleRole(this)">
+        <div class="role-info">
+          <div class="role-title">Business Development Manager</div>
+          <div class="role-meta">
+            <span class="role-tag gold">Business Development</span>
+            <span class="role-tag">Toronto</span>
+            <span class="role-tag">New York City</span>
+            <span class="role-tag">Seattle</span>
+            <span class="role-tag">Hybrid</span>
+          </div>
+        </div>
+        <span class="role-arrow">›</span>
+      </div>
+      <div class="role-desc">
+        You will be responsible for identifying and developing new client relationships across our target markets in Canada and the United States. This includes proactive outreach to business owners, private equity sponsors, and corporate advisors, as well as representing Alderwyn Capital at industry events and through professional networks. The ideal candidate is a confident relationship builder with an established network in the mid-market and a track record of originating mandates or driving revenue in a professional services environment.
+      </div>
+
+      <div class="role-item" onclick="toggleRole(this)">
+        <div class="role-info">
+          <div class="role-title">Origination &amp; Markets Associate</div>
+          <div class="role-meta">
+            <span class="role-tag gold">Business Development</span>
+            <span class="role-tag">Toronto</span>
+            <span class="role-tag">Calgary</span>
+            <span class="role-tag">Vancouver</span>
+            <span class="role-tag">Hybrid</span>
+          </div>
+        </div>
+        <span class="role-arrow">›</span>
+      </div>
+      <div class="role-desc">
+        Supporting our business development function, this role involves researching target companies and sectors, preparing outreach materials, maintaining our CRM system, and assisting senior team members in converting prospects into engaged clients. Strong research and communication skills are essential. Experience in financial services sales, private equity coverage, or deal origination is highly regarded.
+      </div>
+
+      <!-- IT / TECHNOLOGY -->
+      <div class="role-item" onclick="toggleRole(this)">
+        <div class="role-info">
+          <div class="role-title">IT Systems & Infrastructure Manager</div>
+          <div class="role-meta">
+            <span class="role-tag gold">Technology</span>
+            <span class="role-tag">Toronto</span>
+            <span class="role-tag">Hybrid</span>
+          </div>
+        </div>
+        <span class="role-arrow">›</span>
+      </div>
+      <div class="role-desc">
+        You will be responsible for the day-to-day management of our technology infrastructure, including cloud systems, endpoint security, communication platforms, and internal software tools. As a hybrid firm operating across multiple locations, reliable and secure systems are critical to our operations. The role requires strong knowledge of Microsoft 365 administration, cloud infrastructure (Azure or AWS), endpoint management, and information security best practices. Prior experience managing IT in a financial services or professional services environment is strongly preferred.
+      </div>
+
+      <div class="role-item" onclick="toggleRole(this)">
+        <div class="role-info">
+          <div class="role-title">Cybersecurity & Compliance Analyst</div>
+          <div class="role-meta">
+            <span class="role-tag gold">Technology</span>
+            <span class="role-tag">Toronto</span>
+            <span class="role-tag">Vancouver</span>
+            <span class="role-tag">San Francisco</span>
+            <span class="role-tag">Seattle</span>
+            <span class="role-tag">Hybrid</span>
+          </div>
+        </div>
+        <span class="role-arrow">›</span>
+      </div>
+      <div class="role-desc">
+        This role sits at the intersection of technology and regulatory compliance, responsible for maintaining our information security framework, monitoring for threats, managing access controls, and ensuring compliance with applicable data protection regulations in Canada and the United States. You will work closely with our operations and advisory teams to embed security best practices across all aspects of the firm. Relevant certifications (CISSP, CISM, CompTIA Security+) are an advantage.
+      </div>
+
+      <div class="role-item" onclick="toggleRole(this)">
+        <div class="role-info">
+          <div class="role-title">Data & Reporting Analyst</div>
+          <div class="role-meta">
+            <span class="role-tag gold">Technology</span>
+            <span class="role-tag">Toronto</span>
+            <span class="role-tag">New York City</span>
+            <span class="role-tag">Hybrid</span>
+          </div>
+        </div>
+        <span class="role-arrow">›</span>
+      </div>
+      <div class="role-desc">
+        You will be responsible for managing and analysing internal and market data to support our advisory and business development teams. Responsibilities include maintaining deal tracking databases, preparing performance reports, conducting market mapping, and building dashboards that surface actionable insights. Proficiency in Excel, SQL, and business intelligence tools (Power BI or Tableau) is required. Experience with financial data providers such as Bloomberg, PitchBook, or CapIQ is a strong advantage.
+      </div>
+
+      <!-- OPERATIONS -->
+      <div class="role-item" onclick="toggleRole(this)">
+        <div class="role-info">
+          <div class="role-title">Operations & Compliance Coordinator</div>
+          <div class="role-meta">
+            <span class="role-tag gold">Operations</span>
+            <span class="role-tag">Toronto</span>
+            <span class="role-tag">Calgary</span>
+            <span class="role-tag">Hybrid</span>
+          </div>
+        </div>
+        <span class="role-arrow">›</span>
+      </div>
+      <div class="role-desc">
+        This role supports the operational backbone of the firm, managing compliance documentation, KYC and AML processes, regulatory filings, internal policy maintenance, and vendor relationships. The ideal candidate is highly organised, detail-oriented, and comfortable working with legal and regulatory documentation. A background in financial services compliance, legal support, or operations is preferred.
+      </div>
+
+      <div class="role-item" onclick="toggleRole(this)">
+        <div class="role-info">
+          <div class="role-title">Executive Assistant to Managing Director</div>
+          <div class="role-meta">
+            <span class="role-tag gold">Operations</span>
+            <span class="role-tag">Toronto</span>
+            <span class="role-tag">Hybrid</span>
+          </div>
+        </div>
+        <span class="role-arrow">›</span>
+      </div>
+      <div class="role-desc">
+        A highly trusted support role working directly with our Managing Director and senior leadership. You will manage calendars, coordinate travel, prepare correspondence, handle confidential documentation, and ensure the smooth day-to-day running of the executive office. Discretion, professionalism, and the ability to anticipate needs before they arise are essential. Prior experience as an executive assistant in a financial services or professional services firm is strongly preferred.
+      </div>
+
+    </div>
+
+      <div class="role-item" onclick="toggleRole(this)">
+        <div class="role-info">
+          <div class="role-title">Risk & Compliance Analyst</div>
+          <div class="role-meta">
+            <span class="role-tag gold">Risk & Compliance</span>
+            <span class="role-tag">Toronto</span>
+            <span class="role-tag">Calgary</span>
+            <span class="role-tag">Hybrid</span>
+          </div>
+        </div>
+        <span class="role-arrow">›</span>
+      </div>
+      <div class="role-desc">
+        Supporting the firm's compliance function, you will assist with the day-to-day management of regulatory obligations, internal policy documentation, KYC and AML screening, and risk monitoring across active mandates. You will help maintain the firm's compliance registers, prepare periodic reporting, and flag emerging regulatory developments relevant to our Canadian and US operations. This is an analyst-level role suited to someone with one to three years of experience in a compliance, risk, or legal support function within financial services. Familiarity with FINTRAC requirements and Canadian securities regulations is an advantage.
+      </div>
+
+      <div class="role-item" onclick="toggleRole(this)">
+        <div class="role-info">
+          <div class="role-title">Regulatory & AML Associate</div>
+          <div class="role-meta">
+            <span class="role-tag gold">Risk & Compliance</span>
+            <span class="role-tag">Toronto</span>
+            <span class="role-tag">Vancouver</span>
+            <span class="role-tag">Hybrid</span>
+          </div>
+        </div>
+        <span class="role-arrow">›</span>
+      </div>
+      <div class="role-desc">
+        This associate-level role focuses on anti-money laundering processes, client due diligence, and regulatory compliance across the firm's operations. Responsibilities include conducting enhanced due diligence on counterparties, maintaining AML documentation, supporting periodic client reviews, and assisting with the preparation of regulatory filings. The role is well suited to someone with two to four years of experience in an AML, compliance, or risk function. Knowledge of FINTRAC, PCMLTFA, and FinCEN frameworks is desirable.
+      </div>
+
+      <!-- INTERNSHIP -->
+      <div class="role-item" onclick="toggleRole(this)">
+        <div class="role-info">
+          <div class="role-title">Finance Internship — Summer 2026</div>
+          <div class="role-meta">
+            <span class="role-tag gold">Internship</span>
+            <span class="role-tag">Toronto</span>
+            <span class="role-tag">Calgary</span>
+            <span class="role-tag">Vancouver</span>
+            <span class="role-tag">Hybrid</span>
+          </div>
+        </div>
+        <span class="role-arrow">›</span>
+      </div>
+      <div class="role-desc">
+        Alderwyn Capital offers a summer internship programme for undergraduate and postgraduate students studying finance, economics, accounting, or a related discipline. Interns work directly alongside our advisory team, gaining hands-on exposure to live mandates, financial analysis, client documentation, and market research. This is not a structured rotation programme — you will be doing real work from day one. We take on a very small number of interns each year and select carefully. Strong academic performance, genuine interest in M&A and corporate finance, and the ability to work independently are essential. Applications from students in their penultimate or final year of study are strongly encouraged.
+      </div>
+
+      
+    <div class="application-panel reveal">
+      <h3>Apply Now</h3>
+      <div class="application-panel-sub">Submit your application below</div>
+      <form class="app-form" onsubmit="handleAppSubmit(event)">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+1 000 000 0000">
+        </div>
+        <div class="form-group">
+          <label>Position Applying For</label>
+          <select required>
+            <option value="">Select a role</option>
+            <option>Client Services Associate</option>
+            <option>Senior Client Relations Manager</option>
+            <option>Analyst — M&A Advisory</option>
+            <option>Associate — Corporate Finance</option>
+            <option>Business Development Manager</option>
+            <option>Origination &amp; Markets Associate</option>
+            <option>IT Systems &amp; Infrastructure Manager</option>
+            <option>Cybersecurity &amp; Compliance Analyst</option>
+            <option>Data &amp; Reporting Analyst</option>
+            <option>Legal Counsel</option>
+            <option>Risk &amp; Compliance Analyst</option>
+            <option>Regulatory &amp; AML Associate</option>
+            <option>Finance Internship — Summer 2026</option>
+            <option>Operations &amp; Compliance Coordinator</option>
+            <option>Executive Assistant to Managing Director</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Preferred Location</label>
+          <select>
+            <option value="">Select preferred location</option>
+            <option>Toronto, ON</option>
+            <option>Calgary, AB</option>
+            <option>Vancouver, BC</option>
+            <option>New York City, NY</option>
+            <option>Seattle, WA</option>
+            <option>San Francisco, CA</option>
+            <option>Hybrid</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Years of Relevant Experience</label>
+          <select>
+            <option value="">Select</option>
+            <option>Less than 1 year</option>
+            <option>1 – 2 years</option>
+            <option>3 – 5 years</option>
+            <option>6 – 10 years</option>
+            <option>10+ years</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Current or Most Recent Employer</label>
+          <input type="text" placeholder="Company name">
+        </div>
+        <div class="form-group">
+          <label>LinkedIn Profile URL</label>
+          <input type="url" placeholder="linkedin.com/in/yourname">
+        </div>
+        <div class="form-group">
+          <label>Why Alderwyn Capital?</label>
+          <textarea placeholder="Tell us briefly why you're interested in this role and what you would bring to the team..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>Upload CV / Resume</label>
+          <div class="file-upload-area" onclick="document.getElementById('cv-upload').click()">
+            <input type="file" id="cv-upload" accept=".pdf,.doc,.docx" style="display:none" onchange="updateFileName(this)">
+            <span class="file-upload-label" id="file-label">Click to upload your CV or Resume</span>
+            <span class="file-upload-hint">PDF, DOC or DOCX — max 5MB</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Upload Cover Letter (Optional)</label>
+          <div class="file-upload-area" onclick="document.getElementById('cl-upload').click()">
+            <input type="file" id="cl-upload" accept=".pdf,.doc,.docx" style="display:none">
+            <span class="file-upload-label">Click to upload your Cover Letter</span>
+            <span class="file-upload-hint">PDF, DOC or DOCX — max 5MB</span>
+          </div>
+        </div>
+        <button type="submit" class="app-submit">Submit Application</button>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Alderwyn Capital</div>
+  <div class="footer-logo"><img src="logo-dark.png" alt="Alderwyn Capital" style="height:38px;width:auto;opacity:0.4;"></div>
   <div class="footer-copy">&copy; 2019 Alderwyn Capital. All rights reserved.</div>
   <ul class="footer-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="careers.html">Careers</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="privacy-policy.html">Privacy Policy</a></li>
     <li><a href="terms.html">Terms of Use</a></li>
@@ -1113,7 +1651,40 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   reveals.forEach(el => observer.observe(el));
 
-  function handleSubmit(e) {
+  function toggleRole(el) {
+    const desc = el.nextElementSibling;
+    const isOpen = desc.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.role-desc').forEach(d => d.classList.remove('open'));
+    document.querySelectorAll('.role-item').forEach(r => r.classList.remove('active'));
+    // Open clicked if it was closed
+    if (!isOpen) {
+      desc.classList.add('open');
+      el.classList.add('active');
+    }
+  }
+
+  function updateFileName(input) {
+    const label = document.getElementById('file-label');
+    if (input.files.length > 0) {
+      label.textContent = input.files[0].name;
+    }
+  }
+
+  function handleAppSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.app-submit');
+    btn.textContent = 'Application Submitted';
+    btn.style.background = '#4a7a4a';
+    btn.style.color = '#fff';
+    setTimeout(() => {
+      btn.textContent = 'Submit Application';
+      btn.style.background = '';
+      btn.style.color = '';
+      e.target.reset();
+      document.getElementById('file-label').textContent = 'Click to upload your CV or Resume';
+    }, 4000);
+  }
     e.preventDefault();
     const btn = e.target.querySelector('.form-submit');
     btn.textContent = 'Enquiry Submitted';
