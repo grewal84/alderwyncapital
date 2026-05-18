@@ -30,29 +30,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 5%;
+    padding: 0.5rem 5%;
     background: var(--navy);
     border-bottom: 1px solid rgba(184,150,90,0.2);
   }
   .nav-logo {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
     text-decoration: none;
-  }
-  .nav-logo-main {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    font-size: 1.25rem;
-    letter-spacing: 0.12em;
-    color: #fff;
-    text-transform: uppercase;
-  }
-  .nav-logo-sub {
-    font-size: 0.58rem;
-    letter-spacing: 0.35em;
-    color: var(--gold);
-    text-transform: uppercase;
+    display: flex;
+    align-items: center;
   }
   .nav-back {
     font-size: 0.7rem;
@@ -179,8 +164,7 @@
 
 <nav>
   <a href="index.html" class="nav-logo">
-    <span class="nav-logo-main">Alderwyn Capital</span>
-    <span class="nav-logo-sub">Independent Advisory</span>
+    <img src="logo-dark.png" alt="Alderwyn Capital" style="height: 65px; width: auto; display: block;">
   </a>
   <a href="index.html" class="nav-back">← Back to site</a>
 </nav>

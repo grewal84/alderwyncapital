@@ -824,9 +824,9 @@
 <body>
 
 <!-- NAV -->
-<nav>
+<nav id="main-nav">
   <a href="#" class="nav-logo">
-    <img src="logo.jpg" alt="Alderwyn Capital" style="height: 72px; width: auto; display: block;">
+    <img id="nav-logo-img" src="logo-dark.png" alt="Alderwyn Capital" style="height: 65px; width: auto; display: block; transition: opacity 0.3s;">
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
@@ -1128,11 +1128,43 @@
   }
 
   const nav = document.querySelector('nav');
-  window.addEventListener('scroll', () => {
-    nav.style.borderBottomColor = window.scrollY > 50
-      ? 'rgba(184,150,90,0.3)'
-      : 'rgba(184,150,90,0.2)';
-  });
+  const logoImg = document.getElementById('nav-logo-img');
+
+  // Sections with light/cream backgrounds
+  const lightSections = ['about', 'approach', 'leadership', 'presence'];
+
+  function updateNav() {
+    const scrollY = window.scrollY;
+    const navHeight = nav.offsetHeight;
+    const centerY = scrollY + navHeight / 2;
+
+    // Check if nav is over a light section
+    let isLight = false;
+    lightSections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        const top = el.offsetTop;
+        const bottom = top + el.offsetHeight;
+        if (centerY >= top && centerY <= bottom) isLight = true;
+      }
+    });
+
+    if (isLight) {
+      nav.style.background = 'rgba(247,244,239,0.97)';
+      nav.style.borderBottomColor = 'rgba(184,150,90,0.2)';
+      logoImg.src = 'logo-light.png';
+      // Update nav link colors
+      document.querySelectorAll('.nav-links a').forEach(a => a.style.color = '#4a4a4a');
+    } else {
+      nav.style.background = 'rgba(13,27,42,0.97)';
+      nav.style.borderBottomColor = 'rgba(184,150,90,0.2)';
+      logoImg.src = 'logo-dark.png';
+      document.querySelectorAll('.nav-links a').forEach(a => a.style.color = 'rgba(255,255,255,0.7)');
+    }
+  }
+
+  window.addEventListener('scroll', updateNav);
+  updateNav();
 </script>
 </body>
 </html>
