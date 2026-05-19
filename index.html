@@ -991,10 +991,13 @@
     transform: translateY(24px);
     transition: opacity 0.8s ease, transform 0.8s ease;
   }
-
   .reveal.visible {
     opacity: 1;
     transform: none;
+  }
+  /* Fallback - ensure content is never permanently hidden */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; }
   }
 
   @media (max-width: 900px) {
@@ -1648,8 +1651,16 @@
         observer.unobserve(e.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  reveals.forEach(el => observer.observe(el));
+  }, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
+  reveals.forEach(el => {
+    // If element is already in viewport on load, show it immediately
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      el.classList.add('visible');
+    } else {
+      observer.observe(el);
+    }
+  });
 
   function toggleRole(el) {
     const desc = el.nextElementSibling;
