@@ -985,19 +985,8 @@
 
   .app-submit:hover { background: var(--gold-light); }
 
-  /* SCROLL REVEAL */
-  .reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: none;
-  }
   /* Fallback - ensure content is never permanently hidden */
   @media (prefers-reduced-motion: reduce) {
-    .reveal { opacity: 1; transform: none; }
   }
 
   @media (max-width: 900px) {
@@ -1065,7 +1054,7 @@
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="about-left reveal">
+  <div class="about-left">
     <div class="section-eyebrow">About the Firm</div>
     <h2 class="section-title">A firm defined by<br><em>independence.</em></h2>
     <p class="about-body">
@@ -1078,7 +1067,7 @@
       Our hybrid model allows us to deploy senior expertise efficiently across key markets — maintaining a presence where our clients need us, while keeping our structure lean and our focus where it belongs.
     </p>
   </div>
-  <div class="about-right reveal">
+  <div class="about-right">
     <div class="about-pillars">
       <div class="pillar">
         <div class="pillar-num">01</div>
@@ -1106,14 +1095,14 @@
 
 <!-- SERVICES -->
 <section id="services">
-  <div class="reveal">
+  <div >
     <div class="section-eyebrow" style="color:var(--gold);">What We Do</div>
     <h2 class="section-title">Our Advisory<br><em>Services</em></h2>
     <p class="services-intro">
       We advise on the full spectrum of corporate finance activity, from early-stage strategic planning through to transaction execution and post-deal integration.
     </p>
   </div>
-  <div class="services-grid reveal">
+  <div class="services-grid">
     <div class="service-card">
       <span class="service-num">01</span>
       <h3 class="service-title">Mergers &amp; Acquisitions</h3>
@@ -1149,24 +1138,24 @@
 
 <!-- APPROACH -->
 <section id="approach">
-  <div class="reveal">
+  <div >
     <div class="section-eyebrow">How We Work</div>
     <h2 class="section-title">Our <em>Approach</em></h2>
   </div>
   <div class="approach-grid">
-    <div class="approach-item reveal">
+    <div class="approach-item">
       <h3 class="approach-item-title">We take on select mandates</h3>
       <p class="approach-item-desc">Alderwyn Capital maintains a deliberately limited client roster. This ensures every client receives the focused attention of our most senior advisors throughout the life of their engagement, not just at the outset.</p>
     </div>
-    <div class="approach-item reveal">
+    <div class="approach-item">
       <h3 class="approach-item-title">We align our interests with yours</h3>
       <p class="approach-item-desc">Our fee structures are designed to align incentives with client outcomes. We are not motivated by deal volume — we are motivated by achieving the best possible result for the businesses we represent.</p>
     </div>
-    <div class="approach-item reveal">
+    <div class="approach-item">
       <h3 class="approach-item-title">We prepare thoroughly</h3>
       <p class="approach-item-desc">Every engagement begins with a rigorous assessment of your business, your objectives, and the market environment. We believe preparation is what separates good outcomes from exceptional ones.</p>
     </div>
-    <div class="approach-item reveal">
+    <div class="approach-item">
       <h3 class="approach-item-title">We communicate plainly</h3>
       <p class="approach-item-desc">We translate complex financial matters into clear, actionable guidance. Our clients make better decisions when they are fully informed — and we ensure they always are.</p>
     </div>
@@ -1175,13 +1164,13 @@
 
 <!-- LEADERSHIP -->
 <section id="leadership">
-  <div class="reveal">
+  <div >
     <div class="section-eyebrow">The Team</div>
     <h2 class="section-title">Leadership</h2>
   </div>
   <div class="leadership-layout">
 
-    <div class="leader-bio reveal">
+    <div class="leader-bio">
       <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:2rem;color:var(--navy);margin-bottom:0.4rem;">Charles Alderwyn</h3>
       <div class="leader-bio-role">Founder &amp; Managing Director</div>
       <p>
@@ -1201,11 +1190,11 @@
 <!-- PRESENCE -->
 <section id="presence">
   <div class="presence-inner">
-    <div class="presence-left reveal">
+    <div class="presence-left">
       <h2>Based in Canada. Working Worldwide.</h2>
       <p>Alderwyn Capital is headquartered in Toronto and advises clients across North America, Europe, and international markets. We go where our clients need us.</p>
     </div>
-    <div class="presence-locations reveal">
+    <div class="presence-locations">
       <div class="presence-loc">
         <span class="presence-flag">🇨🇦</span>
         <span class="presence-country">Canada</span>
@@ -1222,7 +1211,7 @@
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="reveal">
+  <div >
     <div class="section-eyebrow">Get In Touch</div>
     <h2 class="section-title">Begin a<br><em>Conversation</em></h2>
     <p class="contact-intro">
@@ -1247,7 +1236,7 @@
       </div>
     </div>
   </div>
-  <div class="contact-form-side reveal">
+  <div class="contact-form-side">
     <h3>Send us an enquiry</h3>
     <form onsubmit="handleSubmit(event)">
       <div class="form-group">
@@ -1287,13 +1276,13 @@
 
 <!-- CAREERS -->
 <section id="careers">
-  <div class="reveal">
+  <div >
     <div class="section-eyebrow">Join the Team</div>
     <h2 class="section-title">Careers at<br><em>Alderwyn Capital</em></h2>
     <p class="careers-intro">We are a small, selective team and we hire carefully. We look for people who are intellectually curious, take pride in their work, and want to be part of building something serious. Alderwyn Capital operates on a hybrid basis — our team works flexibly across our locations, with access to office space for client meetings, collaborative work, and key transactions. All roles are hybrid unless otherwise stated.</p>
   </div>
 
-  <div class="careers-layout reveal">
+  <div class="careers-layout">
     <div class="roles-list">
 
       <!-- CLIENT SERVICES -->
@@ -1533,7 +1522,7 @@
       </div>
 
       
-    <div class="application-panel reveal">
+    <div class="application-panel">
       <h3>Apply Now</h3>
       <div class="application-panel-sub">Submit your application below</div>
       <form class="app-form" onsubmit="handleAppSubmit(event)">
@@ -1643,24 +1632,7 @@
 </footer>
 
 <script>
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
-  reveals.forEach(el => {
-    // If element is already in viewport on load, show it immediately
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight) {
-      el.classList.add('visible');
-    } else {
-      observer.observe(el);
-    }
-  });
+  // Page loaded
 
   function toggleRole(el) {
     const desc = el.nextElementSibling;
